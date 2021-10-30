@@ -15,11 +15,16 @@ const Form = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const [message, setMessage] = useState('');
+
   // Custom functions
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(name, email, password);
+    if (name === '' || email === '' || password) {
+      setMessage("Don't leave empty field");
+      return;
+    }
   };
 
   return (
@@ -63,6 +68,7 @@ const Form = () => {
         />
       </InputWrapper>
       <Button text='Submit' />
+      {message}
     </StyledForm>
   );
 };

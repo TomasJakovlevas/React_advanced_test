@@ -1,7 +1,6 @@
 const RegistrationValidation = ({ render }) => {
   // Custom functions
   const validateInput = (input) => {
-    console.log(input);
     return input;
   };
 
