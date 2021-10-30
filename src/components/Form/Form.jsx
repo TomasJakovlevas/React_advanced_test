@@ -21,10 +21,12 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (name === '' || email === '' || password) {
+    if (name === '' || email === '' || password === '') {
       setMessage("Don't leave empty field");
       return;
     }
+
+    setMessage('Success');
   };
 
   return (
